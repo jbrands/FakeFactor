@@ -19,14 +19,16 @@ sh BuildStructure.sh
 cd ../
 make -B
 
-./Preselection
+#./Preselection
 ./SRHisto
 ./CRHisto
 ./steerFF
 ./fitFakeFactors
-./calcCorrections
+/calcCorrections
 python plotCorrections.py --channel $channel
 ./convert_inputs
 python cpTDHaftPublic.py --destination $HOME/$output --channel $channel
 python producePublicFakeFactors.py --input $HOME/$output --channel $channel
 python cpPublicFFtoDC.py --source $HOME/$output --destination $dc_path --channel $channel
+
+rm $HOME/$output/constant.root
