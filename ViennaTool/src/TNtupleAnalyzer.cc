@@ -502,7 +502,7 @@ Int_t TNtupleAnalyzer::setTreeValues(const TString preselectionFile, const Int_t
       lep_phi=event->phi_2;
       lep_q=event->q_2;
       //lep_iso = ( (calcVTightFF==1 && event->byVTightIsolationMVArun2v1DBoldDMwLT_2==1) || (calcVTightFF==0 && event->byTightIsolationMVArun2v1DBoldDMwLT_2==1) )  ? 10 : 0;
-      lep_iso = event->byMediumIsolationMVArun2v1DBoldDMwLT_2==1 ? 10 : 0;
+      lep_iso = event->byTightIsolationMVArun2v1DBoldDMwLT_2==1 ? 10 : 0;
       lep_vloose = ( event->byVLooseIsolationMVArun2v1DBoldDMwLT_2 == 1 ) ? 1 : 0;
       lep_loose = ( event->byLooseIsolationMVArun2v1DBoldDMwLT_2 == 1 ) ? 1 : 0;
       lep_medium = ( event->byMediumIsolationMVArun2v1DBoldDMwLT_2 == 1 ) ? 1 : 0;
@@ -513,7 +513,7 @@ Int_t TNtupleAnalyzer::setTreeValues(const TString preselectionFile, const Int_t
       lep_phi=event->phi_1;
       lep_q=event->q_1;
       //lep_iso = ( (calcVTightFF==1 && event->byVTightIsolationMVArun2v1DBoldDMwLT_1==1) || (calcVTightFF==0 && event->byTightIsolationMVArun2v1DBoldDMwLT_1==1) )  ? 10 : 0;
-      lep_iso = event->byMediumIsolationMVArun2v1DBoldDMwLT_1==1 ? 10 : 0;
+      lep_iso = event->byTightIsolationMVArun2v1DBoldDMwLT_1==1 ? 10 : 0;
       lep_vloose = ( event->byVLooseIsolationMVArun2v1DBoldDMwLT_1 == 1 ) ? 1 : 0;
       lep_loose = ( event->byLooseIsolationMVArun2v1DBoldDMwLT_1 == 1 ) ? 1 : 0;
       lep_medium = ( event->byMediumIsolationMVArun2v1DBoldDMwLT_1 == 1 ) ? 1 : 0;
